@@ -1,0 +1,36 @@
+
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db              # incluir
+  username: postgres    # incluir
+  password:             # incluir
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+
+# Só conferir nomes da app
+development:
+  <<: *default
+  database: bdl_app_development
+
+
+# Só conferir nomes da app
+test:
+  <<: *default
+  database: bdl_app_test
+
+
+# Só conferir nomes da app
+production:
+  <<: *default
+  database: bdl_app_production
+  username: bdl_app
+  password: <%= ENV['BDL_APP_DATABASE_PASSWORD'] %>
+
+
+
+
+
+

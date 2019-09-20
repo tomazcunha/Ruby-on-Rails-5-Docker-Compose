@@ -1,0 +1,54 @@
+version: '3'
+services:
+  web:
+    build: .  
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'" 
+    volumes:
+      - .:/crypto_waller
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - db
+      - redis 
+
+
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+
+  redis:
+    image: redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redisdata:/data
+    ports:
+      - "6379:6379"
+
+volumes:
+  # postgresdata:
+  redisdata:      
+
+
+# build
+  # uma sequência que contém um caminho para o contexto de build
+
+# command
+  # Substitua o comando padrão.
+
+# volumes 
+  # Você pode montar um caminho de host como parte de uma definição para um único serviço e não há necessidade de defini-lo na volumeschave de nível superior.
+  # - postgresdata:/var/lib/postgresql/data
+
+# ports
+  # Especifique as duas portas (HOST: CONTAINER) ou apenas a porta do contêiner (uma porta do host efêmera é escolhida).
+
+# depends_on
+  # Expressar dependência entre serviços, dependências de serviço causam os seguintes comportamentos:
+      # O docker-compose up inicia os serviços em ordem de dependência. No exemplo a seguir, db e redis são iniciados antes da web.
+      # o docker-componha o SERVICE inclui automaticamente as dependências do SERVICE. No exemplo a seguir, a docker-compose up web também cria e inicia db e redis.
+      # docker-compose stop interrompe os serviços em ordem de dependência. No exemplo a seguir, a web é parada antes de db e redis.
+
