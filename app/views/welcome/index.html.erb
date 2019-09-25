@@ -1,8 +1,15 @@
+<p><%= nome_aplicacao %></p>
+
 <h1>Seja bem-vindo!</h1>
+
+<p>Data: <%= data_br(Date.today) %></p>
 
 <ul>
     <li>
         <!-- <a href="http://localhost:3000/coins">Cadastro de Moedas</a> -->
         <a href="/coins">Cadastro de Moedas</a>
+    </li>
+    <li>
+        <%= link_to "Cadastro de Moedas", coins_path %>
     </li>
 </ul>
