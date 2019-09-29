@@ -1,4 +1,7 @@
 class CoinsController < ApplicationController
+
+  layout "adm" # rederiza o layout adm para as views desse controller
+
   before_action :set_coin, only: [:show, :edit, :update, :destroy]
 
   # GET /coins
