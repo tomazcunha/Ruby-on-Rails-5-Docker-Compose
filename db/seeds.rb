@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Cadastrando Moedas..."
+
+Coin.create!(
+    description:"Ethereum",
+    acronym:" ETH",
+    url_image:"https://www.goldeneaglecoin.com/resource/productimages/crypto-1oz-ethereum-obv.png"
+)
+
+Coin.create!(
+    description:"Bitcoin",
+    acronym:"BTC",
+    url_image:"https://p7.hiclipart.com/preview/894/283/775/bitcoin-cash-cryptocurrency-bitcoin-gold-ethereum-bitcoin.jpg"
+)
+
+Coin.create!(
+    description:"dash",
+    acronym:"DASH",
+    url_image:"https://criptohub.com.br/assets/svg/svg006.svg"
+)
+
+Coin.create!(
+    description:"Ripple",
+    acronym:"RPL",
+    url_image:"https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/04/ripple-logo-xrp.png"
+)
+
+puts "Fim do cadastro de Moedas!"
