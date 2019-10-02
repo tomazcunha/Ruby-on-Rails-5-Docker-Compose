@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Cadastrando Moedas..."
 
-Coin.create!(
-  [
+spinner = TTY::Spinner.new("[:spinner] Cadastrando Moedas...")
+spinner.auto_spin
+
+coins = [
     {
       description:"Ethereum",
       acronym:" ETH",
@@ -31,6 +32,10 @@ Coin.create!(
       url_image:"https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/04/ripple-logo-xrp.png"
     }
   ]
-)
 
-puts "Fim do cadastro de Moedas!"
+coins.each do |coin|
+  Coin.find_or_create_by!(coin)
+  # sleep(1)
+end
+
+spinner.success("Fim do cadastro de Moedas!")
