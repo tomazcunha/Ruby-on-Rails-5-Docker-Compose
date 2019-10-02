@@ -5,11 +5,25 @@ namespace :dev do
     # puts para imprimir os resultados
 
     if Rails.env.development?
-        spinner = TTY::Spinner.new("[:spinner] Executando tarefas ...", format: :pulse_2)
-        spinner.auto_spin # Automatic animation with default interval
-        # sleep(2) # Perform task
-        puts %x(rails db:drop db:create db:migrate db:seed)
-        spinner.stop('Cocluído com sucesso!') # Stop animation
+        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:drop' ...")
+        spinner.auto_spin
+        %x(rails db:drop)
+        spinner.success('(Cocluído com sucesso!)')
+
+        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:create' ...")
+        spinner.auto_spin
+        %x(rails db:create)
+        spinner.success('(Cocluído com sucesso!)')
+
+        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:migrate' ...")
+        spinner.auto_spin
+        %x(rails db:migrate)
+        spinner.success('(Cocluído com sucesso!)')
+
+        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:seed' ...")
+        spinner.auto_spin
+        %x(rails db:seed)
+        spinner.success('(Cocluído com sucesso!)')
 
     end
   end
