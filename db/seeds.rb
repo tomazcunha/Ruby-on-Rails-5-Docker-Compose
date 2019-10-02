@@ -30,6 +30,16 @@ coins = [
       description:"Ripple",
       acronym:"RPL",
       url_image:"https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/04/ripple-logo-xrp.png"
+    },
+    {
+      description:"Iota",
+      acronym:"IOT",
+      url_image:"https://miro.medium.com/max/664/1*xo-u5QhLFYUcZwPKdhe8Cg.png"
+    },
+    {
+      description:"ZCash",
+      acronym:"ZEC",
+      url_image:"https://www.zcashcommunity.com/wp-content/uploads/2017/01/cropped-yellow-zcash-logo.png"
     }
   ]
 
