@@ -1,31 +1,33 @@
 namespace :dev do
   desc "Configura o ambiente de desenvolvimento"
   task setup: :environment do
-    # %x(rails db:drop db:create db:migrate db:seed)
-    # puts para imprimir os resultados
 
     if Rails.env.development?
-        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:drop' ...")
-        spinner.auto_spin
-        %x(rails db:drop)
-        spinner.success('(Cocluído com sucesso!)')
 
-        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:create' ...")
-        spinner.auto_spin
-        %x(rails db:create)
-        spinner.success('(Cocluído com sucesso!)')
+        show_spinner("'rails db:drop'") do
+          %x(rails db:drop)
+        end
 
-        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:migrate' ...")
-        spinner.auto_spin
-        %x(rails db:migrate)
-        spinner.success('(Cocluído com sucesso!)')
+        show_spinner("'rails db:create'") do
+          %x(rails db:create)
+        end
 
-        spinner = TTY::Spinner.new("[:spinner] Executando 'rails db:seed' ...")
-        spinner.auto_spin
-        %x(rails db:seed)
-        spinner.success('(Cocluído com sucesso!)')
+        show_spinner("'rails db:migrate'") do
+          %x(rails db:migrate)
+        end
+
+        show_spinner("'rails db:seed'") do
+          %x(rails db:seed)
+        end
 
     end
+  end
+
+  def show_spinner(msg_start, msg_end = "Concluído!")
+    spinner = TTY::Spinner.new("[:spinner] Executando #{msg_start} ...")
+    spinner.auto_spin
+    yield
+    spinner.success("#{msg_end}")
   end
 
 end
