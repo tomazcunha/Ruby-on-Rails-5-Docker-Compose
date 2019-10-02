@@ -4,13 +4,16 @@ namespace :dev do
 
     if Rails.env.development?
 
-      show_spinner("Apagando DB: 'rails db:drop'") { %x(rails db:drop) }
+      commands = {
+        "drop"=> "Apagando DB: 'rails db:drop'",
+        "create" => "Criando DB: 'rails db:create'",
+        "migrate" => "Migrando DB: 'rails db:migrate'",
+        "seed" => "Populando DB: 'rails db:seed'"
+      }
 
-      show_spinner("Criando DB: 'rails db:create'") { %x(rails db:create) }
-
-      show_spinner("Migrando DB: 'rails db:migrate'") { %x(rails db:migrate) }
-
-      show_spinner("Populando DB: 'rails db:seed'") { %x(rails db:seed) }
+      commands.each do |command, msg|
+        show_spinner(msg) { %x(rails db:#{command}) }
+      end
 
     end
   end
