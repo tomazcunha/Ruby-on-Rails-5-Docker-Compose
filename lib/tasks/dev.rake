@@ -9,8 +9,8 @@ namespace :dev do
         "rails db:create" => "Criando DB: 'rails db:create'",
         "rails db:migrate" => "Migrando DB: 'rails db:migrate'",
         # "seed" => "Populando DB: 'rails db:seed'"
-        "rails dev:add_coins" => "Populando DB: 'rails dev:add_coins'",
         "rails dev:add_mining_types" => "Populando DB: 'rails dev:add_mining_types'",
+        "rails dev:add_coins" => "Populando DB: 'rails dev:add_coins'",
       }
 
       commands.each do |command, msg|
@@ -27,32 +27,38 @@ namespace :dev do
         {
           description:"Ethereum",
           acronym:" ETH",
-          url_image:"https://www.goldeneaglecoin.com/resource/productimages/crypto-1oz-ethereum-obv.png"
+          url_image:"https://www.goldeneaglecoin.com/resource/productimages/crypto-1oz-ethereum-obv.png",
+          mining_type: MiningType.all.find_by(acronym: 'PoW')
         },
         {
           description:"Bitcoin",
           acronym:"BTC",
-          url_image:"https://p7.hiclipart.com/preview/894/283/775/bitcoin-cash-cryptocurrency-bitcoin-gold-ethereum-bitcoin.jpg"
+          url_image:"https://p7.hiclipart.com/preview/894/283/775/bitcoin-cash-cryptocurrency-bitcoin-gold-ethereum-bitcoin.jpg",
+          mining_type: MiningType.all.sample
         },
         {
           description:"dash",
           acronym:"DASH",
-          url_image:"https://criptohub.com.br/assets/svg/svg006.svg"
+          url_image:"https://criptohub.com.br/assets/svg/svg006.svg",
+          mining_type: MiningType.all.sample
         },
         {
           description:"Ripple",
           acronym:"RPL",
-          url_image:"https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/04/ripple-logo-xrp.png"
+          url_image:"https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/04/ripple-logo-xrp.png",
+          mining_type: MiningType.all.sample
         },
         {
           description:"Iota",
           acronym:"IOT",
-          url_image:"https://miro.medium.com/max/664/1*xo-u5QhLFYUcZwPKdhe8Cg.png"
+          url_image:"https://miro.medium.com/max/664/1*xo-u5QhLFYUcZwPKdhe8Cg.png",
+          mining_type: MiningType.all.sample
         },
         {
           description:"ZCash",
           acronym:"ZEC",
-          url_image:"https://www.zcashcommunity.com/wp-content/uploads/2017/01/cropped-yellow-zcash-logo.png"
+          url_image:"https://www.zcashcommunity.com/wp-content/uploads/2017/01/cropped-yellow-zcash-logo.png",
+          mining_type: MiningType.all.sample
         }
       ]
 
