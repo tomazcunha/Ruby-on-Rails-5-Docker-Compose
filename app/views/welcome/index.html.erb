@@ -3,11 +3,20 @@
 
 <h1>Seja bem-vindo!</h1>
 
-<p>Idioma atual: <strong><%= locale(I18n.locale) %></strong></p>
+<p>Idioma atual: <strong><%= locale %></strong></p>
+
+<!-- Invocando a tração que está em config/locale/*.yml -->
+<!-- <p>Tradução da chave "hello": <strong><%#= I18n.t('hello') %></strong></p> -->
+
+<!-- Apenas na view, não é preciso por o I18n.t() completo, apenas t() -->
+<p>Tradução da chave "hello": <strong><%= t('hello') %></strong></p>
 
 <p><strong>Data:</strong>
     <%#= data_br(Date.today) %>
-    <%= Date.today %>
+    <%# Date.today %>
+
+    <%#= I18n.l(Date.today) %> <!--"l = locale" Para a dara acompanhar a confoguração de idioma -->
+    <%= l(Date.today) %> <!-- ou simplificando -->
 </p>
 
 

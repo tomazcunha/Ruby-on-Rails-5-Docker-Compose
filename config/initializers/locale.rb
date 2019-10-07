@@ -8,5 +8,6 @@ I18n.available_locales = [:en, "pt-BR"]     # em aspas, por quer simbolos não p
 
 # Set default locale to something other than :en
 # I18n.default_locale = :pt
-# I18n.default_locale = :en   # mater o idioma inglê por enquanto
-I18n.default_locale = "pt-BR"   # mater o idioma inglê por enquanto
+I18n.default_locale = :en   # mater o idioma inglê por enquanto
+# I18n.default_locale = "pt-BR"
+    
