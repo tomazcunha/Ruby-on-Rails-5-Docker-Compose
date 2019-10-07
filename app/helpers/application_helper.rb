@@ -14,9 +14,10 @@ module ApplicationHelper
       "CRYPTO WALLET APP"
     end
 
-    def locale
-        I18n.locale == :en ? "Estados Unidos" : "Português do Brasil"
-    end
+    # Não é mais usado devido a incluisão da variavel "actual_locale" no config/locales
+    # def locale
+    #     I18n.locale == :en ? "Estados Unidos" : "Português do Brasil"
+    # end
 
     def ambiente_rails
         if Rails.env.development?
