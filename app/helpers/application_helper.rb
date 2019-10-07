@@ -14,6 +14,10 @@ module ApplicationHelper
       "CRYPTO WALLET APP"
     end
 
+    def locale(locale)
+        I18n.locale == :en ? "Estados Unidos" : "Português do Brasil"
+    end
+
     def ambiente_rails
         if Rails.env.development?
             "Desenvolvimento"

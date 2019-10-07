@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # ------------------------------------------------------------------------------
 gem 'pry-rails'     # highlight para rails
 gem 'tty-spinner'   # gem para indicar que o processo está sendo executado
+gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x     # Internacionalização
 
 # ------------------------------------------------------------------------------
 

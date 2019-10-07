@@ -3,7 +3,12 @@
 
 <h1>Seja bem-vindo!</h1>
 
-<p>Data: <%= data_br(Date.today) %></p>
+<p>Idioma atual: <strong><%= locale(I18n.locale) %></strong></p>
+
+<p><strong>Data:</strong>
+    <%#= data_br(Date.today) %>
+    <%= Date.today %>
+</p>
 
 
 <p>Você está em Ambiente de <strong><%= ambiente_rails %></strong></p>
