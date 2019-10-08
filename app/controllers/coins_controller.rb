@@ -1,6 +1,6 @@
 class CoinsController < ApplicationController
 
-  layout "adm" # rederiza o layout adm para as views desse controller
+  # layout "adm" # rederiza o layout adm para as views desse controller
 
   before_action :set_coin, only: [:show, :edit, :update, :destroy]
   before_action :set_mining_type_options, only: [:new, :create, :edit, :update]

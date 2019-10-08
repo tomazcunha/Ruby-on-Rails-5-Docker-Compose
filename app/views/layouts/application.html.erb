@@ -6,13 +6,23 @@
         <%= csp_meta_tag %>
 
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+            <!-- params[:controller] para carregar o css com o nome do controller -->
+
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
+            <!-- params[:controller] para carregar o javascript com o nome do controller -->
     </head>
 
     <body>
         <h1>CABEÇALHO - LAYOUT APPLICATION</h1>
+        <h3>Controller = <%= params[:controller] %></h3>
+
         <%= render "layouts/menu" %>
+
         <%= yield %>
+
         <h1>RODAPÉ</h1>
     </body>
 </html>
