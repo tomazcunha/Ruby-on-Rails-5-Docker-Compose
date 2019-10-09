@@ -11,6 +11,8 @@
             <!-- params[:controller] para carregar o css com o nome do controller -->
 
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'jquery', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'notify', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
             <!-- params[:controller] para carregar o javascript com o nome do controller -->
     </head>
@@ -22,6 +24,10 @@
         <%= render "layouts/menu" %>
 
         <%= yield %>
+
+        <script type="text/javascript">
+            $.notify("Funcionou!", "success");
+        </script>
 
         <h1>RODAPÉ</h1>
     </body>
