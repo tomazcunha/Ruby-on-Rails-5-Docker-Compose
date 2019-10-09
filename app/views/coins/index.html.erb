@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= cookies[:curso_coockie] %></p>
-<p><%= session[:curso_session] %></p>
+<!-- <p><%#= cookies[:curso_coockie] %></p> -->
+<!-- <p><%#= session[:curso_session] %></p> -->
 
-<h1>Moedas</h1>
+<!-- <h1>Moedas</h1> -->
+<!-- <h1><%#= Coin.model_name %></h1> -->
+<!-- Coin -->
+
+<!-- <h1><%#= Coin.model_name.human %></h1> -->
+<!-- Moeda -->
+
+<h1><%= Coin.model_name.human( count: @coins.count ) %></h1>
+<!-- Moedas -->
+<!-- "count:" vai verificar se existe mais de uma moéda para por no plural "Coins" -->
 
 <table class="table table-hover">
   <thead>
@@ -25,7 +34,7 @@
         <td><%= image_tag(coin.url_image, size: "25x25") %></td>
         <td><%= link_to t('links.show'), coin %></td>
         <td><%= link_to t('links.edit'), edit_coin_path(coin) %></td>
-        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to t('links.delete'), coin, method: :delete, data: { confirm: t('messages.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Coin', new_coin_path %>
+<%= link_to t('links.new_coin'), new_coin_path, class:"btn btn-primary" %>

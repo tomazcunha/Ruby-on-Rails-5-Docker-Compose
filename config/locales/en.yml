@@ -36,9 +36,14 @@ en:
   messages:
     wellcome: "This is Crypto Wallet, an application to register and track your cryptocoins."
     menu: "To get started, select one of the options below:"
+    confirm: "Are you sure?"
   hello: "Hello world"
   links:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
     begin: "Index"
+    back: "Back"
+    new: "New"
+    new_coin: "New Coin"
+    new_min_type: "New Mining Type"
