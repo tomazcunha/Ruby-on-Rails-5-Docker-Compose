@@ -41,6 +41,14 @@ gem 'pry-rails'     # highlight para rails
 gem 'tty-spinner'   # gem para indicar que o processo está sendo executado
 gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x     # Internacionalização
 
+# gem 'rails-assets-jquery', source: 'https://rails-assets.org'
+# gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-notifyjs'
+end
+
 # ------------------------------------------------------------------------------
 
 group :development, :test do
