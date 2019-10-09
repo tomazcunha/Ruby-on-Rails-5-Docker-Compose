@@ -1,30 +1,34 @@
-<p><%= link_to 'Português', root_path(locale: 'pt-BR') %></p>
-<p><%= link_to 'English', root_path(locale: 'en') %></p>
+<div class="jumbotron">
+  <h1 class="display-4">Seja Bem-Vindo!</h1>
+  <p class="lead">Este é o Crypto Wallet, uma aplicação para cadastrar e acompanhar suas criptomoedas.</p>
+  <hr class="my-4">
+  <p>Para começar, selecione uma das opções abaixo:</p>
 
-<p><%= nome_aplicacao %></p>
+  <%= link_to "Moedas", coins_path, class:"btn btn-primary btn-lg", role:"button" %>
+  <%= link_to "Mineração", mining_types_path, class:"btn btn-primary btn-lg", role:"button" %>
+</div>
 
-
-<h1>Seja bem-vindo!</h1>
+<p><%#= nome_aplicacao %></p>
 
 <!-- <p>Idioma atual: <strong><%#= locale %></strong></p> -->
-<p>Idioma atual: <strong><%= t('actual_locale') %></strong></p>
+<!-- <p>Idioma atual: <strong><%#= t('actual_locale') %></strong></p> -->
 
 <!-- Invocando a tração que está em config/locale/*.yml -->
 <!-- <p>Tradução da chave "hello": <strong><%#= I18n.t('hello') %></strong></p> -->
 
 <!-- Apenas na view, não é preciso por o I18n.t() completo, apenas t() -->
-<p>Tradução da chave "hello": <strong><%= t('hello') %></strong></p>
+<!-- <p>Tradução da chave "hello": <strong><%#= t('hello') %></strong></p> -->
 
-<p><strong>Data:</strong>
+<!-- <p><strong>Data:</strong> -->
     <%#= data_br(Date.today) %>
     <%# Date.today %>
 
     <%#= I18n.l(Date.today) %> <!--"l = locale" Para a dara acompanhar a confoguração de idioma -->
-    <%= l(Date.today) %> <!-- ou simplificando -->
-</p>
+    <%#= l(Date.today) %> <!-- ou simplificando -->
+<!-- </p> -->
 
 
-<p>Você está em Ambiente de <strong><%= ambiente_rails %></strong></p>
+<!-- <p>Você está em Ambiente de <strong><%#= ambiente_rails %></strong></p> -->
 
-<p>Variável de Instência/Sessão = <strong><%= @nome %></strong></p>
-<p>Meu Curso = <strong><%= @curso %></strong></p>
+<!-- <p>Variável de Instência/Sessão = <strong><%#= @nome %></strong></p> -->
+<!-- <p>Meu Curso = <strong><%#= @curso %></strong></p> -->
