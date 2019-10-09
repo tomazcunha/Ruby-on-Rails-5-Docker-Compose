@@ -1,12 +1,12 @@
 <ul>
     <li>
-        <%= link_to "Início", root_path %>
+        <%= link_to t('links.begin'), root_path %>
     </li>
     <li>
-        <%= link_to "Moedas", coins_path %>
+        <%= link_to "#{Coin.model_name.human}", coins_path %>
     </li>
     </li>
     <li>
-        <%= link_to "Mineração", mining_types_path %>
+        <%= link_to "#{MiningType.model_name.human}", mining_types_path %>
     </li>
 </ul>
