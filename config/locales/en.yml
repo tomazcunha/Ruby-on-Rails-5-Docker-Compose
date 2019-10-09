@@ -37,6 +37,7 @@ en:
     wellcome: "This is Crypto Wallet, an application to register and track your cryptocoins."
     menu: "To get started, select one of the options below:"
     confirm: "Are you sure?"
+    select: "Select..."
   hello: "Hello world"
   links:
     edit: "Edit"
