@@ -44,6 +44,13 @@ en:
     delete: "Delete"
     begin: "Index"
     back: "Back"
-    new: "New"
-    new_coin: "New Coin"
-    new_min_type: "New Mining Type"
+    new:
+      new: "New"
+      coin: "New Coin"
+      mining_type: "New Mining Type"
+    editing:
+      coin: "Editing Coin"
+      mining_type: "Editing Mining Type"
+    showing:
+      coin: "Showing Coin"
+      mining_type: "Showing Mining Type"
