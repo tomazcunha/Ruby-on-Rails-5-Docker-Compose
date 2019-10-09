@@ -30,7 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  actual_locale: "English (International)"
+    # actual_locale: "English (International)"
+  current_locale: "English (International)"
+  wellcome: "Wellcome!"
+  messages:
+    wellcome: "This is Crypto Wallet, an application to register and track your cryptocoins."
+    menu: "To get started, select one of the options below:"
   hello: "Hello world"
   links:
     edit: "Edit"

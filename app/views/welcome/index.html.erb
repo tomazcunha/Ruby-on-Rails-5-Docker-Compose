@@ -1,8 +1,8 @@
 <div class="jumbotron">
-  <h1 class="display-4">Seja Bem-Vindo!</h1>
-  <p class="lead">Este é o Crypto Wallet, uma aplicação para cadastrar e acompanhar suas criptomoedas.</p>
+  <h1 class="display-4"><%= t('wellcome') %></h1>
+  <p class="lead"><%= t('messages.wellcome')%></p>
   <hr class="my-4">
-  <p>Para começar, selecione uma das opções abaixo:</p>
+  <p><%= t('messages.menu')%></p>
 
   <%= link_to "Moedas", coins_path, class:"btn btn-primary btn-lg", role:"button" %>
   <%= link_to "Mineração", mining_types_path, class:"btn btn-primary btn-lg", role:"button" %>
