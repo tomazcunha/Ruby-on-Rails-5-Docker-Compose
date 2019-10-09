@@ -6,12 +6,16 @@
 # Setar como diretório de trabalho, o diretório do container
 # Copiar os arquivos locais Gemfile e Gemfile.lock para o container
 # Rodar o bundle install no container para instalar o Rails do Gemfile
-#
 
 
 FROM ruby:2.5
 MAINTAINER tomazmcn@gmail.com
 RUN apt-get update -qq && apt-get install -y build-essential nodejs postgresql-client
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && \
+    apt-get install -y yarn
+
 RUN mkdir -p /crypto_wallet
 WORKDIR /crypto_wallet
 COPY Gemfile /crypto_wallet/Gemfile
