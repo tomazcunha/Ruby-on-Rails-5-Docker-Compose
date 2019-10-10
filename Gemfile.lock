@@ -193,8 +193,12 @@ GEM
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
+      activesupport (>= 4.2)
       bindex (>= 0.4.0)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
       railties (>= 5.0)
+    webpacker (4.0.7)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
@@ -229,6 +233,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  webpacker
 
 RUBY VERSION
    ruby 2.5.6p201
