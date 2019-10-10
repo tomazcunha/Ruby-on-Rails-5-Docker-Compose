@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @mining_type.description %>
-</p>
+<h1><%= t('activerecord.models.mining_type.one') %></h1>
+<!-- Também funciona -->
+<h1><%#= MiningType.model_name.human %></h1>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @mining_type.acronym %>
-</p>
+<form>
+  <!-- Exte exemplo está usando @coin.class.human_attribute_name() -->
+  <div class="form-group">
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @mining_type.description, class:"form-control", disabled: true %>
+  </div>
 
-<%= link_to 'Edit', edit_mining_type_path(@mining_type) %> |
-<%= link_to 'Back', mining_types_path %>
+  <!-- Estou usando nestes, o proprio arquivo de tradução -->
+  <div class="form-group">
+    <%= label_tag nil, t('activerecord.attributes.mining_type.acronym') %>
+    <%= text_field_tag nil, @mining_type.acronym, class:"form-control", disabled: true %>
+  </div>
+
+</form>
+
+<%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), mining_types_path, class:"btn btn-primary" %>
