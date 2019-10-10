@@ -12,16 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2019_10_04_230216) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "coins", force: :cascade do |t|
     t.string "description"
     t.string "acronym"
     t.string "url_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "mining_type_id"
+    t.integer "mining_type_id"
     t.index ["mining_type_id"], name: "index_coins_on_mining_type_id"
   end
 
@@ -32,5 +29,4 @@ ActiveRecord::Schema.define(version: 2019_10_04_230216) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "coins", "mining_types"
 end
