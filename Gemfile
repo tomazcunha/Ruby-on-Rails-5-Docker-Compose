@@ -89,6 +89,7 @@ group :protuction do
   # gem 'pg', '>= 0.18', '< 2.0'
   gem 'pg'
 
+  gem 'jquery-rails' # para erro do delete registro em production
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
