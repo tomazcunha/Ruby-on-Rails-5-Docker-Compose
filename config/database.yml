@@ -12,6 +12,7 @@
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 
+
 # PostgreSQL
   # Configure Using Gemfile
   # gem 'pg'
@@ -20,9 +21,11 @@
 #   encoding: unicode
 #   # For details on connection pooling, see Rails configuration guide
 #   # http://guides.rubyonrails.org/configuring.html#database-pooling
-#   host: db              # incluir
-#   username: postgres    # incluir
-#   password:             # incluir
+#
+#   # host: db              # incluir
+#   # username: postgres    # incluir
+#   # password:             # incluir
+#
 #   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 
@@ -91,28 +94,30 @@
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 
-# PostgreSQL
+# # PostgreSQL
 # production:
-#   <<: *default
+#   # <<: *default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see Rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 #   database: crypto_wallet_production
-#   # username: crypto_wallet
-#   # password: <%= ENV['CRYPTO_WALLER_DATABASE_PASSWORD'] %>
+#   username: crypto_wallet
+#   password: <%= ENV['CRYPTO_WALLER_DATABASE_PASSWORD'] %>
 
 
 
 
 # ------------------------------------------------------------------------------
-
-
 # SQLite3
+# ------------------------------------------------------------------------------
+
 # development:
 #   adapter: sqlite3
 #   database: db/development.sqlite3
 #   pool: 5
 #   timeout: 5000
-
-
-
 
 defaults: &default
   adapter: sqlite3
@@ -126,6 +131,51 @@ test:
   <<: *default
   database: db/development.sqlite3_test
 
+# production:
+#   <<: *default
+#   database: db/development.sqlite3_production
+
+
+
+
+# ------------------------------------------------------------------------------
+# postgresql
+# ------------------------------------------------------------------------------
+
+# Getting Started on Heroku with Rails 5.x | Heroku Dev Center
+# https://devcenter.heroku.com/articles/getting-started-with-rails5
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see Rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#
+# development:
+#   <<: *default
+#   database: myapp_development
+#
+# test:
+#   <<: *default
+#   database: myapp_test
+#
+# production:
+#   <<: *default
+#   database: myapp_production
+#   username: myapp
+#   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+
+
+# default: &default
+
 production:
-  <<: *default
-  database: db/development.sqlite3_production
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # <<: *default
+  database: myapp_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
