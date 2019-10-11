@@ -1,0 +1,93 @@
+/* line 1, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 12, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 18, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 24, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+a {
+  color: #000;
+}
+/* line 27, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+a:visited {
+  color: #666;
+}
+/* line 31, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 37, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 41, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 46, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 51, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+#notice {
+  color: green;
+}
+
+/* line 55, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 61, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 68, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 78, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 84, /home/tomaz19/1_Tomaz/Projetos/0_tom-ruby-on-rails/crypto_wallet/app/assets/stylesheets/scaffolds.scss.erb */
+label {
+  display: block;
+}
